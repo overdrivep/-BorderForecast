@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class TopServlet
+ * /TopServletでリクエストされるとここに来る
  */
 @WebServlet("/TopServlet")
 public class TopServlet extends HttpServlet {
@@ -29,6 +30,12 @@ public class TopServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		//日付判定LOGICにアクセス
+		//日付を元にデータをゲット
+		//if文やswitchでアクセス先のページ確定
+		// request.setAttribute(key,value);
+		// 参照するjspファイルの置き場
 		String view = "/WEB-INF/view/index.jsp";
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 	    dispatcher.forward(request, response);

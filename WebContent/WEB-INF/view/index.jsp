@@ -8,5 +8,9 @@
 </head>
 <body>
  <%= new java.util.Date() %>
+
+ <%--${key}で値の取得ができる --%>
+
+
 </body>
 </html>
