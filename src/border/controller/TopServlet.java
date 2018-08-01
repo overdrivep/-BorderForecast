@@ -35,6 +35,7 @@ public class TopServlet extends HttpServlet {
 		//日付を元にデータをゲット
 		//if文やswitchでアクセス先のページ確定
 		// request.setAttribute(key,value);
+		
 		// 参照するjspファイルの置き場
 		String view = "/WEB-INF/view/index.jsp";
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(view);
