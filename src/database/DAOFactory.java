@@ -26,7 +26,6 @@ public class DAOFactory extends Factory {
 		case "Day9Point":
 			return Day9PointDAO.getInstance();
 		default:
-			System.err.println(dao_name + " does not exist");
 			return null;
 		}
 	}

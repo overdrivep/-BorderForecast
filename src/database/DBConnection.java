@@ -6,17 +6,23 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-	private static final String DRIVER = "com.mysql.jdbc.Driver";
-	private static final String SERVER = "localhost";
-	private static final String DB_NAME = "border_forecast";
-	private static final String OPTION = "serverTimezone=JST&autoReconnect=true&useSSL=false";
-	private static final String URL = "jdbc:mysql://" + SERVER + "/" + DB_NAME + "?" + OPTION;
-	private static final String USER = "root";
-	private static final String PASSWORD = "root";
+	private static final String DB_PROP_FILE = "db.properties";
+	private static final String DRIVER = "driver";
+	private static final String URL = "url";
+	private static final String USER = "user";
+	private static final String PASSWORD = "pw";
 
-	public static Connection connect() throws IOException, ClassNotFoundException, SQLException {
-		Class.forName(DRIVER);
-		return DriverManager.getConnection(URL, USER, PASSWORD);
+	public static void loadDriver() throws IOException,ClassNotFoundException {
+		String driver = PropertyLoader.getProperty(DB_PROP_FILE,DRIVER);
+		Class.forName(driver);
+	}
+
+	public static Connection connect() throws IOException,SQLException {
+		String url = PropertyLoader.getProperty(DB_PROP_FILE,URL);
+		String user = PropertyLoader.getProperty(DB_PROP_FILE,USER);
+		String password =PropertyLoader.getProperty(DB_PROP_FILE,PASSWORD);
+
+		return DriverManager.getConnection(url,user,password);
 	}
 
 	public static void disconnect(Connection conn) throws SQLException {
