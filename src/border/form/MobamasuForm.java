@@ -1,115 +1,115 @@
 package border.form;
 
 public class MobamasuForm {
-	
+
 	private String eventName;
-	
+
 	private String day1Point_1;
-	
+
 	private String day1Point_100;
-	
+
 	private String day1Point_200;
-	
+
 	private String day1Point_1000;
-	
+
 	private String day1Point_1500;
-	
+
 	private String day1Point_2000;
 
 	private String day2Point_1;
-	
+
 	private String day2Point_100;
-	
+
 	private String day2Point_200;
-	
+
 	private String day2Point_1000;
-	
+
 	private String day2Point_1500;
-	
+
 	private String day2Point_2000;
-	
+
 	private String day3Point_1;
-	
+
 	private String day3Point_100;
-	
+
 	private String day3Point_200;
-	
+
 	private String day3Point_1000;
-	
+
 	private String day3Point_1500;
-	
+
 	private String day3Point_2000;
-	
+
 	private String day4Point_1;
-	
+
 	private String day4Point_100;
-	
+
 	private String day4Point_200;
-	
+
 	private String day4Point_1000;
-	
+
 	private String day4Point_1500;
-	
+
 	private String day4Point_2000;
 
 	private String day5Point_1;
-	
+
 	private String day5Point_100;
-	
+
 	private String day5Point_200;
-	
+
 	private String day5Point_1000;
-	
+
 	private String day5Point_1500;
-	
+
 	private String day5Point_2000;
-	
+
 	private String day6Point_1;
-	
+
 	private String day6Point_100;
-	
+
 	private String day6Point_200;
-	
+
 	private String day6Point_1000;
-	
+
 	private String day6Point_1500;
-	
+
 	private String day6Point_2000;
-	
+
 	private String day7Point_1;
-	
+
 	private String day7Point_100;
-	
+
 	private String day7Point_200;
-	
+
 	private String day7Point_1000;
-	
+
 	private String day7Point_1500;
-	
+
 	private String day7Point_2000;
-	
+
 	private String day8Point_1;
-	
+
 	private String day8Point_100;
-	
+
 	private String day8Point_200;
-	
+
 	private String day8Point_1000;
-	
+
 	private String day8Point_1500;
-	
+
 	private String day8Point_2000;
-	
+
 	private String day9Point_1;
-	
+
 	private String day9Point_100;
-	
+
 	private String day9Point_200;
-	
+
 	private String day9Point_1000;
-	
+
 	private String day9Point_1500;
-	
+
 	private String day9Point_2000;
 
 	public String getEventName() {
