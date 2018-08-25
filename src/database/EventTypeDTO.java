@@ -1,6 +1,6 @@
 package database;
 
-public class EventTypeDTO extends VO {
+public class EventTypeDTO {
 	private int event_type_id;
 	private String event_type_name;
 

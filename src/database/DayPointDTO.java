@@ -1,6 +1,6 @@
 package database;
 
-public class DayPointDTO extends VO {
+public class DayPointDTO {
 	private int event_id;
 	private Long point_place_1st;
 	private Long point_place_100th;

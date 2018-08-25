@@ -41,6 +41,7 @@ public class EventInfoDAO {
 				event_info_dto.setEnd_day(rs.getString("end_day"));
 				event_info_dto.setEvent_name(rs.getString("event_name"));
 				event_info_dto.setReward_idle(rs.getString("reward_idle"));
+				event_info_dto.setIdol_id(rs.getInt("idol_id"));
 			}
 			return event_info_dto;
 		}catch(Exception e) {
@@ -68,5 +69,4 @@ public class EventInfoDAO {
 		}
 		return event_id_list;
 	}
-
 }

@@ -1,12 +1,13 @@
 package database;
 
-public class EventInfoDTO extends VO {
+public class EventInfoDTO {
 	private int event_id;
 	private int event_type_id;
 	private String begin_day;
 	private String end_day;
 	private String event_name;
 	private String reward_idle;
+	private int idol_id;
 
 	public int getEvent_id() {
 		return event_id;
@@ -26,6 +27,9 @@ public class EventInfoDTO extends VO {
 	public String getReward_idle() {
 		return reward_idle;
 	}
+	public int getIdol_id() {
+		return idol_id;
+	}
 	public void setEvent_id(int event_id) {
 		this.event_id = event_id;
 	}
@@ -44,6 +48,7 @@ public class EventInfoDTO extends VO {
 	public void setReward_idle(String reward_idle) {
 		this.reward_idle = reward_idle;
 	}
-
-
+	public void setIdol_id(int idol_id) {
+		this.idol_id = idol_id;
+	}
 }
