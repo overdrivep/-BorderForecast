@@ -2,7 +2,6 @@ package database;
 
 public class DayPointDTO extends VO {
 	private int event_id;
-	private String term;
 	private Long point_place_1st;
 	private Long point_place_100th;
 	private Long point_place_200th;
@@ -12,10 +11,6 @@ public class DayPointDTO extends VO {
 
 	public int getEvent_id() {
 		return event_id;
-	}
-
-	public String getTerm() {
-		return term;
 	}
 
 	public Long getPoint_place_1st() {
@@ -44,10 +39,6 @@ public class DayPointDTO extends VO {
 
 	public void setEvent_id(int event_id) {
 		this.event_id = event_id;
-	}
-
-	public void setTerm(String term) {
-		this.term = term;
 	}
 
 	public void setPoint_place_1st(Long point_place_1st) {
