@@ -25,12 +25,16 @@ public class ForecastLogic {
 	public String getEventName(int evetnId) {
 		Connection conn = null;
 		try {
+			// DriverのLoad
+			DBConnection.loadDriver();
 			// データベースへ接続
 			conn = DBConnection.connect();
 			EventInfoDAO eventInfoDao = EventInfoDAO.getInstance();
 			EventInfoDTO eventInfoDto = eventInfoDao.select(conn, evetnId);
 			return eventInfoDto.getEvent_name();
 		} catch(IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -122,6 +126,8 @@ public class ForecastLogic {
 	public void forecast(MobamasuForm form,int eventId) {
 		Connection conn = null;
 		try {
+			// DriverのLoad
+			DBConnection.loadDriver();
 			// データベースへ接続
 			conn = DBConnection.connect();
 			List<Integer> eventList = getPastEventId(conn, eventId);
@@ -202,6 +208,8 @@ public class ForecastLogic {
 			form.setDay9Point_1500(String.valueOf(dto.getPoint_place_1500th()));
 			form.setDay9Point_2000(String.valueOf(dto.getPoint_place_2000th()));
 		} catch(IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
