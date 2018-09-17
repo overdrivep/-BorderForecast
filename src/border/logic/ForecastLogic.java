@@ -21,8 +21,11 @@ import database.EventInfoDAO;
 import database.EventInfoDTO;
 
 public class ForecastLogic {
-	//イベント名を取得する
-	public String getEventName(int evetnId) {
+	//現在開催中のイベントIDを取得する
+	//引数 なし
+	//成功 eventID
+	//失敗 -1
+	public int getCurrentEventId() {
 		Connection conn = null;
 		try {
 			// DriverのLoad
@@ -30,7 +33,36 @@ public class ForecastLogic {
 			// データベースへ接続
 			conn = DBConnection.connect();
 			EventInfoDAO eventInfoDao = EventInfoDAO.getInstance();
-			EventInfoDTO eventInfoDto = eventInfoDao.select(conn, evetnId);
+			return eventInfoDao.getEventId(conn);
+		} catch(IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				DBConnection.disconnect(conn);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return -1;
+	}
+
+	//イベント名を取得する
+	//引数 eventID
+	//成功 event名
+	//失敗 空文字
+	public String getEventName(int eventId) {
+		Connection conn = null;
+		try {
+			// DriverのLoad
+			DBConnection.loadDriver();
+			// データベースへ接続
+			conn = DBConnection.connect();
+			EventInfoDAO eventInfoDao = EventInfoDAO.getInstance();
+			EventInfoDTO eventInfoDto = eventInfoDao.select(conn, eventId);
 			return eventInfoDto.getEvent_name();
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -51,9 +83,9 @@ public class ForecastLogic {
 	//過去のイベントIDを取得するメソッド
 	//引数は現在のイベントID
 	//戻り値は過去のイベント
-	private List<Integer> getPastEventId(Connection conn, int evetnId) throws IOException, SQLException {
+	private List<Integer> getPastEventId(Connection conn, int eventId) throws IOException, SQLException {
 		EventInfoDAO eventInfoDao = EventInfoDAO.getInstance();
-		return eventInfoDao.getEventIdListPastThreeEvents(conn, evetnId);
+		return eventInfoDao.getEventIdListPastThreeEvents(conn, eventId);
 	}
 
 	//過去ポイントを取得するメソッド
