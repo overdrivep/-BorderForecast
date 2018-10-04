@@ -143,8 +143,8 @@ public class ForecastLogic {
 		point.setPoint_place_100th((past1.getPoint_place_100th()+past2.getPoint_place_100th()+past3.getPoint_place_100th())/3);
 		point.setPoint_place_200th((past1.getPoint_place_200th()+past2.getPoint_place_200th()+past3.getPoint_place_200th())/3);
 		point.setPoint_place_1000th((past1.getPoint_place_1000th()+past2.getPoint_place_1000th()+past3.getPoint_place_1000th())/3);
-		point.setPoint_place_1st((past1.getPoint_place_1500th()+past2.getPoint_place_1500th()+past3.getPoint_place_1500th())/3);
-		point.setPoint_place_1st((past1.getPoint_place_2000th()+past2.getPoint_place_2000th()+past3.getPoint_place_2000th())/3);
+		point.setPoint_place_1500th((past1.getPoint_place_1500th()+past2.getPoint_place_1500th()+past3.getPoint_place_1500th())/3);
+		point.setPoint_place_2000th((past1.getPoint_place_2000th()+past2.getPoint_place_2000th()+past3.getPoint_place_2000th())/3);
 
 		return point;
 	}
