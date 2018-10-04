@@ -17,8 +17,7 @@
  google.setOnLoadCallback(drawChart);
 
 
-
- // グラフ作成用のコールバック関数
+// グラフ作成用のコールバック関数
  function drawChart() {
 	 //tableの値取得
 	 var Point =  document.getElementById('border');
@@ -91,7 +90,7 @@
 	 var day2Point_1000 = Point_1000.cells[2].innerText;
 	 day2Point_1000 = Number(day2Point_1000);
 	 var day3Point_1000 = Point_1000.cells[3].innerText;
-	 day3Point_1000 = Number(day3Point_100);
+	 day3Point_1000 = Number(day3Point_1000);
 	 var day4Point_1000 = Point_1000.cells[4].innerText;
 	 day4Point_1000 = Number(day4Point_1000);
 	 var day5Point_1000 = Point_1000.cells[5].innerText;
